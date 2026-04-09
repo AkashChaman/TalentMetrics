@@ -1,0 +1,26 @@
+/* auth.css */
+.auth-page        { min-height:100vh; display:flex; align-items:stretch; }
+.auth-left        { flex:1; background:var(--forest); display:flex; flex-direction:column; justify-content:center; padding:60px; position:relative; overflow:hidden; }
+.auth-left-geo    { position:absolute; inset:0; pointer-events:none; }
+.auth-left-content { position:relative; z-index:2; }
+.auth-left-logo   { display:flex; align-items:center; gap:10px; margin-bottom:60px; }
+.auth-quote       { font-family:var(--font-display); font-size:32px; font-weight:700; color:#fff; line-height:1.35; margin-bottom:24px; }
+.auth-quote em    { font-style:italic; color:var(--gold-light); }
+.auth-quote-sub   { font-size:15px; color:rgba(255,255,255,.45); line-height:1.7; }
+.auth-stats       { display:flex; gap:40px; margin-top:56px; flex-wrap:wrap; }
+.auth-stat-val    { font-family:var(--font-display); font-size:32px; font-weight:900; color:var(--gold-light); }
+.auth-stat-lbl    { font-size:12px; color:rgba(255,255,255,.35); margin-top:3px; }
+.auth-right       { flex:1; background:var(--cream); display:flex; align-items:center; justify-content:center; padding:40px; }
+.auth-form-box    { width:100%; max-width:440px; }
+.auth-tabs        { display:flex; border:1.5px solid var(--slate-2); border-radius:var(--r-sm); overflow:hidden; margin-bottom:32px; }
+.auth-tab         { flex:1; padding:12px; background:none; border:none; cursor:pointer; font-family:var(--font-body); font-size:14px; font-weight:700; color:var(--slate-6); transition:all .18s; }
+.auth-tab.on      { background:var(--forest); color:#fff; }
+.auth-form-title  { font-family:var(--font-display); font-size:26px; font-weight:800; color:var(--ink); margin-bottom:6px; }
+.auth-form-sub    { font-size:14px; color:var(--slate-6); margin-bottom:28px; }
+.auth-form-fields { display:flex; flex-direction:column; gap:18px; }
+.role-picker      { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.role-opt         { padding:14px 16px; border:1.5px solid var(--slate-2); border-radius:var(--r-sm); cursor:pointer; text-align:center; transition:all .18s; }
+.role-opt.on      { border-color:var(--emerald); background:var(--sage); }
+.role-opt-icon    { font-size:24px; margin-bottom:6px; }
+.role-opt-name    { font-size:13px; font-weight:700; color:var(--ink-mid); }
+@media(max-width:900px) { .auth-left { display:none; } .auth-right { width:100%; } }

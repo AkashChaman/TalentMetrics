@@ -1,0 +1,38 @@
+$privateKey = @"
+-----BEGIN PRIVATE KEY-----
+MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDQc1z+XgONckPL
+G8H7E+BHZChnC5n003p5oOFKhH2gP/EBLr7mcj6aU6YsDNxunClkFE4Gc4rcMuDe
+JwcJ2mAjn9WSCNmj74BFlYAcsmtO4ZjYHpcXhIp5AWA0TYy99U7dfEc+B1VLNBMw
+o28+3hI4PfanHRdQ2mThk1XcHYShrKZgK3Qubvl299kX8bhsAxRqBZzrjxUFrQfh
+PnBeS8sJ9E9FUJZhAy6SLSocvHH7fScs0wJ+4SlV7fiAsXg1gufknjxw7PbzzwA1
+DJBulnF+ybM5bW+7QtuDpg8dY8ZT/+W0SHGF4rAfxRI0svWmGNG+LbjSJZNKfJDZ
+y22et7fxAgMBAAECggEAEJQQQhG/lhUPo7x4K8wbownp9bIUQ0a7f6dmK5tIc4GK
+XSX23FSbOoJrHadDM8/bMeC0iOpREazBOiHf+y5hRYwNfBEUoCdo6//VIdMl2i7y
+jUO3kBEEQ1Xy7Q364tO6+z4KW3pRVAsW+KAS9azLRapV7toPM+i+q7sgUcKOPR5d
+knxqoUTTEFhwA7plH6r6LomOBFlf+KbyqiZv0Ql4esI3mE2DRe5Ogiw3EQgkKO+Y
+Qg+GPmGlHmdNpN8bd7LZwLlbI78L43eiYfMu7H15WyhagOwfe6sDHNaP8JUYq2w4
+25FE6c9wGwFYfz1/fFjjEWFkGv2kHgWAn8RTcIoOPQKBgQDwCmVuaz/d+I0+/szZ
+zw8pEl8ZG1aYNkRIMoFCHSZQ69USjFTzPBu6M7WnZ9L6Jz9Tdm+sVfZDKJ3qCqg4
+MT0ZTl0cJYiFLbVHVX26kdQ2Hk1UMxeVMJpr4Bwrm6r++nzKQyJqxTcPFMt9ePtT
+IbKglbXlQaWDrdrJP1pUTwhqBQKBgQDeT0p3xiIWfO48uOt2Gv1IeeJiLJyE6bCQ
+YURrr7olw3hzGrEs1CewEcM/HLskph9K3siYzSOmzczOcXsLmIw3P1orU/2aZ1HO
+gRs/0c+iuIbM22cPlXnMwY03Aewwlwvd2YlQPLSfC1I1gdkFoHAXxupQeElj/u4M
+WeUPyiD9/QKBgGAGOKdgXg9FA/QEaBxluZHbmJFpn02Kv+wF0DGLia1rejROURlw
+nULytqN+ZCbQFoQj5+6QANDC6dEbbEn2YJPEBnlhBmkIbPFZYM+G0NbJbnPVcISt
+CclHwN0tC82ulMcw7g66UBlHX1QVVqzd2SBmY3qPtU+k99Xz8wWxDBOlAoGAOaVR
+6BEGkdI/bJt+4xdIilygqVhsFcMLN8UhGtNsb5JqT16ihr9Us0FH4buvg2dYQe/X
+EFhRYFWJQBcJEw6xfTn+RbH31uvnuKadzES5lLZIriJObSoTdVbTKWpkNo1UVGiu
+RJIZPAyRerJ69gyORHweElO+pCFc1PMShK+jMnkCgYBY5y8jX8mFzARGjceiXRYx
++jmvGNKLtjWAZlf2HvBz3Ac/2p9cQbNxmE4k6LLHAUXqiAuIBs4YQhsBaqWrJZ12
+zBazdthRaNvNrvY2DA5X2MKh6RshOvcJlMWIW9PAhCHzUUyjW2Q9Eqmjpurjv81a
+QIoEgZhecvRsaoBwpf51Jw==
+-----END PRIVATE KEY-----
+"@
+
+# Add simple env vars
+vercel env add FIREBASE_PROJECT_ID --yes <<< "talentmetrics-6a911"
+vercel env add FIREBASE_PRIVATE_KEY_ID --yes <<< "64c442871d179419e01f8f983b9271ea2635ba28"
+vercel env add FIREBASE_CLIENT_EMAIL --yes <<< "firebase-adminsdk-fbsvc@talentmetrics-6a911.iam.gserviceaccount.com"
+vercel env add FIREBASE_CLIENT_ID --yes <<< "112387603448176829804"
+vercel env add FIREBASE_DATABASE_URL --yes <<< "https://your-project-id-default-rtdb.firebaseio.com"
+vercel env add FIREBASE_PRIVATE_KEY --yes <<< $privateKey

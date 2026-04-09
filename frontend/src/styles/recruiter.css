@@ -1,0 +1,43 @@
+/* recruiter.css */
+.filter-row        { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:20px; align-items:center; }
+.search-wrap       { position:relative; flex:1; min-width:200px; }
+.search-ico        { position:absolute; left:14px; top:50%; transform:translateY(-50%); font-size:16px; color:var(--slate-4); }
+/* Candidate Table */
+.cand-table        { background:var(--white); border-radius:var(--r-lg); border:1px solid var(--slate-2); overflow:hidden; }
+.ct-head           { display:grid; grid-template-columns:52px 1fr 140px 110px 90px 150px; background:var(--slate-1); border-bottom:1px solid var(--slate-2); }
+.ct-hcell          { padding:13px 16px; font-size:11px; font-weight:800; color:var(--slate-4); text-transform:uppercase; letter-spacing:.8px; }
+.ct-row            { display:grid; grid-template-columns:52px 1fr 140px 110px 90px 150px; border-bottom:1px solid var(--slate-2); transition:background .15s; }
+.ct-row:last-child { border-bottom:none; }
+.ct-row:hover      { background:var(--slate-1); }
+.ct-row.shortlisted { background:rgba(22,163,74,.04); border-left:3px solid var(--emerald); }
+.ct-cell           { padding:15px 16px; display:flex; align-items:center; font-size:14px; color:var(--ink-mid); }
+.cand-ava          { width:36px; height:36px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:14px; font-weight:800; color:#fff; }
+.score-mini-bar    { display:flex; align-items:center; gap:8px; }
+.score-track       { flex:1; height:5px; background:var(--slate-2); border-radius:999px; overflow:hidden; min-width:40px; }
+.score-fill        { height:100%; border-radius:999px; }
+.score-fill.high   { background:var(--emerald); }
+.score-fill.mid    { background:var(--amber); }
+.score-fill.low    { background:var(--red); }
+/* Settings */
+.settings-section  { max-width:580px; }
+.settings-card     { background:var(--white); border-radius:var(--r-lg); padding:32px; border:1px solid var(--slate-2); margin-bottom:20px; }
+.settings-card h4  { font-family:var(--font-display); font-size:18px; font-weight:800; color:var(--ink); margin-bottom:20px; }
+.toggle-row        { display:flex; align-items:center; justify-content:space-between; padding:14px 0; border-bottom:1px solid var(--slate-2); }
+.toggle-row:last-child { border-bottom:none; }
+.toggle-info .t-name { font-size:14px; font-weight:600; color:var(--ink); }
+.toggle-info .t-desc { font-size:12px; color:var(--slate-6); margin-top:2px; }
+.toggle            { width:46px; height:26px; background:var(--emerald); border-radius:999px; position:relative; cursor:pointer; transition:background .2s; flex-shrink:0; }
+.toggle.off        { background:var(--slate-2); }
+.toggle-knob       { position:absolute; right:3px; top:3px; width:20px; height:20px; background:#fff; border-radius:50%; transition:right .2s, left .2s; box-shadow:0 1px 4px rgba(0,0,0,.2); }
+.toggle.off .toggle-knob { right:auto; left:3px; }
+/* Analytics */
+.analytics-grid    { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.chart-card        { background:var(--white); border-radius:var(--r-lg); padding:28px; border:1px solid var(--slate-2); }
+.chart-card h4     { font-family:var(--font-display); font-size:17px; font-weight:800; color:var(--ink); margin-bottom:20px; }
+.bar-chart         { display:flex; align-items:flex-end; gap:10px; height:140px; }
+.bar-wrap          { flex:1; display:flex; flex-direction:column; align-items:center; gap:8px; }
+.bar-col           { width:100%; border-radius:4px 4px 0 0; transition:height .4s ease; min-height:4px; }
+.bar-lbl           { font-size:10px; color:var(--slate-4); font-weight:600; text-align:center; }
+.bar-val           { font-size:12px; font-weight:800; color:var(--ink-mid); }
+@media(max-width:900px){.analytics-grid{grid-template-columns:1fr;}.ct-head,.ct-row{grid-template-columns:46px 1fr 100px 80px;}.ct-hcell:nth-child(3),.ct-cell:nth-child(3),.ct-hcell:nth-child(5),.ct-cell:nth-child(5){display:none;}}
+@media(max-width:600px){.ct-head,.ct-row{grid-template-columns:40px 1fr 80px;}.ct-hcell:nth-child(4),.ct-cell:nth-child(4){display:none;}}

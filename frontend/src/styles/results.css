@@ -1,0 +1,43 @@
+/* results.css */
+.res-layout        { max-width:940px; margin:0 auto; padding:40px 24px 60px; }
+.res-hero          { background:var(--forest); border-radius:var(--r-xl); padding:52px 48px; margin-bottom:28px; position:relative; overflow:hidden; display:flex; align-items:center; gap:48px; flex-wrap:wrap; }
+.res-hero-geo      { position:absolute; inset:0; pointer-events:none; }
+.res-hero-geo::before { content:''; position:absolute; top:-40%; right:-10%; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle,rgba(212,160,23,.14),transparent 65%); }
+.res-score-ring    { position:relative; z-index:2; flex-shrink:0; width:150px; height:150px; }
+.res-ring-inner    { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+.res-score-num     { font-family:var(--font-display); font-size:44px; font-weight:900; color:var(--gold-light); line-height:1; }
+.res-score-of      { font-size:13px; color:rgba(255,255,255,.4); margin-top:2px; }
+.res-hero-info     { flex:1; position:relative; z-index:2; }
+.res-hero-title    { font-family:var(--font-display); font-size:30px; font-weight:900; color:#fff; margin-bottom:10px; }
+.res-hero-sub      { font-size:15px; color:rgba(255,255,255,.55); margin-bottom:28px; }
+.res-hero-chips    { display:flex; gap:24px; flex-wrap:wrap; }
+.res-chip          { text-align:center; }
+.res-chip-val      { font-family:var(--font-display); font-size:24px; font-weight:900; color:var(--gold-light); }
+.res-chip-lbl      { font-size:12px; color:rgba(255,255,255,.4); margin-top:3px; }
+.res-grid          { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:28px; }
+.res-detail-card   { background:var(--white); border-radius:var(--r-lg); padding:28px; border:1px solid var(--slate-2); }
+.res-detail-card h4 { font-family:var(--font-display); font-size:17px; font-weight:800; color:var(--ink); margin-bottom:18px; }
+.fb-item           { padding:13px 0; border-bottom:1px solid var(--slate-2); }
+.fb-item:last-child { border-bottom:none; }
+.fb-q              { font-size:12.5px; color:var(--slate-6); margin-bottom:5px; }
+.fb-row            { display:flex; justify-content:space-between; align-items:center; }
+.fb-status         { font-size:14px; font-weight:700; }
+.skill-item        { margin-bottom:16px; }
+.skill-row         { display:flex; justify-content:space-between; margin-bottom:7px; }
+.skill-name        { font-size:13px; font-weight:600; color:var(--ink-mid); }
+.skill-pct         { font-size:13px; font-weight:800; }
+/* Leaderboard */
+.lb-wrap           { background:var(--white); border-radius:var(--r-lg); border:1px solid var(--slate-2); overflow:hidden; margin-bottom:28px; }
+.lb-hd             { display:grid; grid-template-columns:56px 1fr 110px 90px 120px; background:var(--slate-1); border-bottom:1px solid var(--slate-2); }
+.lb-hd-cell        { padding:13px 16px; font-size:11px; font-weight:800; color:var(--slate-4); text-transform:uppercase; letter-spacing:.8px; }
+.lb-row            { display:grid; grid-template-columns:56px 1fr 110px 90px 120px; border-bottom:1px solid var(--slate-2); transition:background .15s; }
+.lb-row:last-child { border-bottom:none; }
+.lb-row:hover      { background:var(--slate-1); }
+.lb-row.you        { background:rgba(22,163,74,.06); border-left:3px solid var(--emerald); }
+.lb-cell           { padding:15px 16px; font-size:14px; font-weight:500; color:var(--ink-mid); display:flex; align-items:center; }
+.rank-num          { width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:13px; font-weight:900; }
+.rk-gold           { background:var(--gold);  color:#fff; }
+.rk-silver         { background:#cbd5e1;      color:var(--ink-mid); }
+.rk-bronze         { background:#fcd34d;      color:#78350f; }
+.rk-other          { background:var(--slate-1); color:var(--slate-6); }
+@media(max-width:768px){.res-hero{flex-direction:column;padding:32px 24px;}.res-grid{grid-template-columns:1fr;}.lb-hd,.lb-row{grid-template-columns:48px 1fr 90px 80px;}.lb-hd .lb-hd-cell:nth-child(5),.lb-row .lb-cell:nth-child(5){display:none;}}

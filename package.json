@@ -1,0 +1,16 @@
+{
+  "name": "talentmetrics",
+  "version": "1.0.0",
+  "description": "TalentMetrics — AI-Powered Interview Platform",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install-all": "npm install",
+    "start-backend": "npm run --workspace=backend start",
+    "start-frontend": "npm run --workspace=frontend start",
+    "dev-backend": "npm run --workspace=backend dev",
+    "build-frontend": "npm run --workspace=frontend build"
+  }
+}
